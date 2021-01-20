@@ -1,6 +1,6 @@
 #include "OutputArduino.h"
 
-bool setOutput(int& _output)
+bool OutputArduino::setOutput(int& _output)
 {
 	if(_output!=0||_output!=1)
 		return false;
@@ -12,7 +12,7 @@ bool setOutput(int& _output)
 	return true;
 }
 
-bool setPin(char& _pin)
+bool OutputArduino::setPin(char& _pin)
 {
 	if(_pin>53)
 		return false;
@@ -20,7 +20,7 @@ bool setPin(char& _pin)
 	return true;
 }
 
-char getPin()
+char OutputArduino::getPin()
 {
 	return pin;
 }
